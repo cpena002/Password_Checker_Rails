@@ -1,0 +1,39 @@
+<!-- # set a form. action is the name of the route. set metho to get. -->
+<form action="check_password" mehtod="get">
+
+  <!-- # Set a label for the "user_id" input. Note that the label tag knows what to label thanks to the id set up in the input tag. -->
+  <label for="id_by_user">User ID</label>
+
+  <!-- # Set an input box for the parameter "user_id" and give it an id for use by the label tag above. -->
+  <input id="id_by_user" type="text" name="user_id" required=""/>
+
+  <br/>
+
+  <!-- # Set a label for the "user_password" input. Note that the label tag knows what to label thanks to the id set up in the input tag. -->
+  <label for="password_by_user">Password</label>
+
+  <!-- # Set an input box for the parameter "user_id" and give it an id for use by the label tag above. -->
+  <input id="password_by_user" type="text" name="user_password" required=""/>
+
+  <br/>
+
+  <!-- # Create the submit button for both input tags above. -->
+  <input type="submit" name="submit" class="btn btn-primary">
+</form>
+
+<!-- # Display value of instance variale @valid_id. -->
+<%= @valid_id %>
+<br/>
+
+<!-- # Display value of instance variale @valid_password.  -->
+<%= @valid_password %>
+
+<br/>
+
+Attempts <%= cookies[:attempts] %>
+
+<br/>
+
+<%= @credential_tries %>
+
+<!-- Password Attempts <%= cookies[:password_attempts] %> -->
